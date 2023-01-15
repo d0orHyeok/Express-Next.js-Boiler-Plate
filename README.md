@@ -2,9 +2,11 @@
 
 기존 Express 환경에 Next.js를 사용할 수 있도록 설정하는 방법입니다.
 
+Next.js를 Express 서버와 함께 실행시키는 방법입니다.
+
 ## 설치
 
-> 먼저 Next.js 프로젝트를 생성합니다.
+### CRN - Next.js 프로젝트를 생성
 
 ```shell
 npx create-next-app@latest
@@ -25,7 +27,7 @@ npx create-next-app@latest
     </tr>
 </table>
 
-> Express 를 설치합니다.
+### Express 설치
 
 ```shell
 npm install --save express dotenv
@@ -36,7 +38,7 @@ npm install --save-dev nodemon
 
 ## Express 서버 생성
 
-> Express 서버파일을 작성합니다.
+Express 서버파일을 작성합니다.
 
 <table>
 <tr>
@@ -73,9 +75,9 @@ app.listen(app.get('port'), () => {
 });
 ```
 
-## Next.js 서버 설정추가
+## Next.js 서버 설정
 
-> server/server.js 파일에 next.js 서버 설정을 추가합니다.
+server/server.js 파일에 next.js 서버 설정을 추가합니다.
 
 ```shell
 # .env
@@ -144,7 +146,7 @@ module.exports = app;
 
 ## 실행 설정
 
-> package.json 파일의 시작명령어 script를 Express를 사용하도록 수정합니다.
+package.json 파일의 시작명령어 script를 Express를 사용하도록 수정합니다.
 
 ```json
 // package.json
@@ -158,7 +160,7 @@ module.exports = app;
 ...
 ```
 
-> nodemon을 사용
+### nodemon 사용
 
 ```json
 // package.json
@@ -169,7 +171,7 @@ module.exports = app;
 ...
 ```
 
-> nodemon 설정파일 사용
+### nodemon.json 사용
 
 - nodemon.json 파일을생성
 
